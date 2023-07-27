@@ -16,4 +16,19 @@ public class DogHandler {
     public long getNoOfDogs() {
         return itsDogsRepo.count();
     }
+
+    public Dog getDogByName(String name) {
+        int count = 0;
+        for (dog d : itsDogsRepo) {
+            if(!d.getName().equals(name))
+                return null;
+            else
+                count++;
+                if (count > 1)
+                    return null;
+                else
+                    return d;
+        }
+    }
+
 }
