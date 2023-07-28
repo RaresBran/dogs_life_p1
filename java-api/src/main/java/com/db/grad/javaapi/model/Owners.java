@@ -6,21 +6,29 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "dogs")
-public class Dog
-{
-    @Id
-    private long id;
-    private String name;
-    private long age;
+@Table(name = "owners")
+public class Owners {
 
     @Id
-    @Column(name = "dog_id", nullable = false)
+    private long ownerId;
+    private String name;
+
+    public Owners() {
+
+    }
+
+    public Owners(long id, String name, long age) {
+        this.ownerId=id;
+        this.name = name;
+    }
+
+    @Id
+    @Column(name = "owner_id", nullable = false)
     public long getId() {
-        return id;
+        return ownerId;
     }
     public void setId(long id) {
-        this.id = id;
+        this.ownerId = id;
     }
 
     @Column(name = "name", nullable = false)
@@ -29,13 +37,5 @@ public class Dog
     }
     public void setName(String name) {
         this.name = name;
-    }
-
-    @Column(name = "age", nullable = false)
-    public long getAge() {
-        return age;
-    }
-    public void setAge(long age) {
-        this.age = age;
     }
 }
