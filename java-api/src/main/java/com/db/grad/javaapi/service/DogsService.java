@@ -9,15 +9,10 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class DogHandler implements IDogsService
+public class DogsService implements IDogsService
 {
-    private DogsRepository itsDogsRepo;
-
     @Autowired
-    public DogHandler( DogsRepository dogRepo )
-    {
-        itsDogsRepo = dogRepo;
-    }
+    private DogsRepository itsDogsRepo;
 
     @Override
     public List<Dog> getAllDogs()
@@ -59,7 +54,7 @@ public class DogHandler implements IDogsService
     }
 
     @Override
-    public Dog getDogByName(String dogsName )
+    public Dog getDogByName(String dogsName)
     {
         Dog dogToFind = new Dog();
         dogToFind.setName(dogsName);

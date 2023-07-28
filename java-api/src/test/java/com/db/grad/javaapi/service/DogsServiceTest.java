@@ -19,13 +19,13 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
-public class DogsHandlerTest
+public class DogsServiceTest
 {
     @Mock
     private DogsRepository itsDogsRepo;
 
     @InjectMocks
-    private DogHandler cut;
+    private DogsService cut;
 
     @Test
     public  void    add_a_dog_return_number_of_dogs_in_repo_is_one()
