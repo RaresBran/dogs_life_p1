@@ -56,9 +56,9 @@ public class DogsService implements IDogsService
     @Override
     public Dog getDogByName(String dogsName)
     {
-        Dog dogToFind = new Dog();
-        dogToFind.setName(dogsName);
-        List<Dog> dogs = itsDogsRepo.findByName(dogToFind);
+//        Dog dogToFind = new Dog();
+//        dogToFind.setName(dogsName);
+        List<Dog> dogs = itsDogsRepo.findByName(dogsName);
         Dog result = null;
 
         if( dogs.size() == 1)
