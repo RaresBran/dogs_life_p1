@@ -4,10 +4,10 @@ import batman from '../images/batman.jpeg';
 const HeroDetail = () => {
     return (
         <div>
-            <img src="images/batman.jpeg" alt="Batman" height="250px" />
+            <img src={batman} alt="Batman" height="250px" />
             <p id="blue-alias">Alias: Batman</p>
-            <p class="green-class">Name: Bruce Wayne</p>
-            <button class="green-class">Like</button>
+            <p className="green-class">Name: Bruce Wayne</p>
+            <button className="green-class">Like</button>
         </div>
   )
 }
