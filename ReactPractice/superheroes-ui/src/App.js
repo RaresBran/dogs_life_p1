@@ -12,7 +12,7 @@ import HeroForm from './components/HeroForm';
 function App() {
   return (
     <>
-    
+
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
           <Navbar.Brand href="/">Heroes</Navbar.Brand>
@@ -25,13 +25,13 @@ function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      
-        <Routes>
-          <Route path="allheroes" element={<AllHeroes/>} />
-          <Route path="addhero" element={<HeroForm/>} />
-          <Route path="/" element={<AllHeroes/>} />
-        </Routes>
-      
+
+      <Routes>
+        <Route path="allheroes" element={<AllHeroes />} />
+        <Route path="addhero" element={<HeroForm />} />
+        <Route path="/" element={<AllHeroes />} />
+      </Routes>
+
     </>
   );
 }
